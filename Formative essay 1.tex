@@ -6,7 +6,7 @@
 
 
 \documentclass[english]{scrartcl}
-\usepackage{babel,newpxtext,url}
+\usepackage{babel,newpxtext,url,booktabs}
 \usepackage[utf8x]{inputenc}
 
 
@@ -26,22 +26,20 @@
 \title{How does induction differ from deduction?\\Why is induction important to reasoning\\in science?}
 \subtitle{Formative Essay 1\\\input{Formative essay 1.wc}words}
 \author{Reuben Thomas}
-\date{21st October 2021}
+\date{23rd October 2021}
 \maketitle
 
-Inductive inference is generally held to be an entirely distinct mode of reasoning from mathematical induction. In this essay I shall show that, on the contrary, they are structurally similar, and use this similarity to illuminate the importance of inductive inference to science.
+Inductive inference is generally held to be an entirely distinct mode of reasoning from mathematical induction. In this essay I shall show that, on the contrary, they are structurally similar, and that this similarity illuminates the importance of inductive inference to science.
 
-Induction and deduction are methods of argument that use inference to reason from premisses to conclusion.
+Induction and deduction are methods of argument that use inference to reason from premisses to conclusion. Deduction applies the rules of some logic to the premisses to reach the conclusion: the reasoning is tautological. In an inductive inference, the conclusion is merely supported by the premisses. Deduction is universally accepted as a valid mode of reasoning.
 
-Deduction applies the rules of some logic to the premisses to reach the conclusion: the reasoning is tautological. In an inductive inference, the conclusion is merely supported by the premisses. Deduction is universally accepted as a valid mode of reasoning.
+Induction’s importance to science is that it permits generalization: without it, we would have only knowledge by acquaintance and propositional knowledge. (An omniscient being could work out general laws, because their laws would not need to predict anything, as they would already be in possession of all possible observations.) Induction has not been formulated in a logically rigorous way; the classic statement of “the problem of induction” is given by Hume~\cite{hume1978}. For example, I may observe many white swans, and conclude that all swans are white; but Hume says “the sheer number of impressions has in this case no more effect than if we confined ourselves to one only”: that is, concluding that all swans are white from seeing one white swan is just as valid as reaching the conclusion from seeing a hundred. (Popper might remind us that it only takes a single black swan to falsify the proposition.)
 
-Induction’s importance to science is that it permits generalization: without it, we would have only knowledge by acquaintance and propositional knowledge, and therefore only an omniscient being could work out general laws. Induction is widely accepted not to be a valid mode of reasoning; the classic statement of “the problem of induction” is given by Hume~\cite{hume1978}. For example, I may observe many white swans, and conclude that all swans are white; but Hume says “the sheer number of impressions has in this case no more effect than if we confined ourselves to one only”: that is, concluding that all swans are white from seeing one white swan is just as valid as reaching the conclusion from seeing a hundred. (And Popper might remind us that it only takes a single black swan to falsify the proposition.)
+Inductive reasoning and mathematical induction are usually treated as unrelated modes of reasoning that unfortunately share a name: for example, Wikipedia’s article “Mathematical induction”~\cite{wiki:mathematical-induction} says “Although its name may suggest otherwise, mathematical induction should not be confused with inductive reasoning as used in philosophy.” Mathematical induction is indeed a type of deductive reasoning, but, as I will explain, it is nonetheless a form of induction; the difference between mathematical induction and inductive reasoning is more subtle than it first appears, and illuminates the difference between mathematics and science.
 
-It is instructive to compare inductive reasoning with mathematical induction. These are typically treated as unrelated modes of reasoning that unfortunately share a name: for example, Wikipedia’s articles on the topics~\cite{wiki:mathematical-induction,wiki:inductive-reasoning} both warn the reader not to confuse the one concept with the other. It is true that mathematical induction is a type of deductive reasoning, but, as I will explain, it is nonetheless a form of induction, and the difference between mathematical induction and inductive reasoning is more subtle than it first appears, and illuminates the importance of inductive reasoning to science.
+Mathematical induction is a proof technique used to prove that some proposition $P(n)$ holds for every natural number $0, 1,…$. Other forms of mathematical induction apply to more general “well-founded” structures. A “proof by induction” consists of two cases: the \textbf{base case}, which proves $P(0)$, and the \textbf{induction step}, which proves that $P(n)$ implies $P(n+1)$. Taken together with the axiom of induction, these prove $P(n)$ for all $n$.
 
-Mathematical induction is a proof technique used to prove that some proposition $P(n)$ holds for every natural number $0, 1,…$. Mathematical induction can be generalized to structures other than the natural numbers; in general, “structural induction” can be used on any well-founded relation; further details are beyond the scope of this essay. A “proof by induction” consists of two cases: the \textbf{base case}, which proves $P(0)$, and the \textbf{induction step}, which proves that $P(n)$ implies $P(n+1)$. A classic example is the proof that the sum of the first $n$ natural numbers is $\frac{n(n+1)}{2}$.
-
-So, we must prove, for all $n$, $P(n): 0+1+…n = \frac{n(n+1)}{2}$.
+A classic example is the proof that the sum of the first $n$ natural numbers is $\frac{n(n+1)}{2}$. So, we must prove, for all $n$, $P(n): 0+1+…n = \frac{n(n+1)}{2}$.
 
 First, the base case: $P(0)$ is the proposition $0 = \frac{0(0+1)}{2}$. We can simplify the right-hand side to $\frac{0×1}{2}$, which is $\frac{0}{2}$, which is $0$. So, we have proved the base case.
 
@@ -49,15 +47,29 @@ The induction step is to prove that $P(n)\supset P(n+1)$. In other words, we can
 
 To see how this works for all $n$, go back to $P(0)$, which we proved above. In the induction step, we showed that if $P(0)$ is true, then $P(1)$ is true. We can now repeat the induction step: assuming $P(1)$ is true, $P(2)$ must be true; and we can continue to prove $P(n)$ for any $n$, because for any desired $n$ we will reach it eventually by counting up from $0$.
 
-The mathematical argument appears at first to be a finite argument: the proofs of $P(0)$ and of $P(n)\supset P(n+1)$ both consist of a finite number of steps. But as we just saw, the proof technique is justified by the structure of the natural numbers: we know that we can reach any given number eventually, however large, by counting. The “glue” of mathematical induction is the logical connection between the numbers, of which we have \emph{a priori} knowledge.
+The proofs of the base case and induction step are indeed valid deductive arguments. However, to complete the proof we must accept the axiom of induction: just as in the case of inductive inference, the validity of our proof by (mathematical) induction rests on our accepting the validity of induction.
 
-In the physical world, we do not usually claim we have such knowledge; instead, we rely on the assumption that nature is uniform. The sun has risen every day for as far back as we can remember, so we infer by induction that it will rise tomorrow. One electron behaves like another in any experiment we care to make, so we infer by induction that Ohm’s Law will always hold. But our “induction step”, in the case of science, relies on this assumption of uniformity: there is no “well-founded structure” in the physical world on which we can perform mathematical induction.
+The following table shows the parallel structure of inductive inference and mathematical induction:
 
-In mathematics we can be certain of our results; in physics, if we want to formulate general laws, we are forced to be pragmatic, and take the uniformity of nature on trust. But we have a considerable body of evidence on which to rest our confidence: centuries of careful experimentation combine with millennia of everyday observation to convince us that the universe is, indeed, uniform. Induction is not just, as in Reichenbach’s words, “the best wager we can lay”~\cite{reichenbach1938eap}, it is a very good wager indeed.
+\begin{center}
+  \begin{tabular}{cc}
+    \textbf{Inductive inference} & \textbf{Mathematical induction}\\
+    Base case & Observations\\
+    Induction step & Description of causal relation\\
+    Axiom of induction & “Axiom of induction”\\
+  \end{tabular}
+\end{center}
+
+This puts the question, “Why is induction important to reasoning in science?” in a new light: the answer is, because it lets us generalize, \emph{just as mathematical induction does}. Far from being a poor relative of mathematical induction, unjustified as a valid mode of reasoning, merely, in Reichenbach’s words, “the best wager we can lay”~\cite{reichenbach1938eap}, inductive inference is the analogue in the realm of physics of the axiom of induction. Just as mathematical induction allows us to make proofs about all natural numbers from observations about a few, inductive inference is the essential tool we grasp to turn our individual observations into general laws.
 
 \bibliographystyle{plain}
 \bibliography{philosophy}
 
+                                                                                                                                                                                        %TC:ignore                                                                                                                                \section*{Acknowledgement}
+
+I thank Alistair Turnbull for critically reading this essay, and in particular for restoring to my attention the axiom of induction, which I had forgotten, except for a vague impression that mathematical induction was not as watertight as the consensus in the seminar held it to be!
+%TC:endignore
+
 \end{document}
 
-% LocalWords:  Reichenbach’s
+% LocalWords:  Reichenbach
