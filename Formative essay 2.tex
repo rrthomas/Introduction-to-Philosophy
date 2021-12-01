@@ -18,7 +18,8 @@
 
 
 % New commands
-
+\newcommand{\law}[1]{\textsc{#1}}
+\newcommand{\var}[1]{\emph{#1}}
 
 
 \begin{document}
@@ -26,18 +27,69 @@
 \title{Explain how perdurantism seems to solve the problem of change}
 \subtitle{Formative Essay 2\\\input{Formative essay 2.wc}words}
 \author{Reuben Thomas}
-\date{27th November 2021}
+\date{1st December 2021}
 \maketitle
 
+In this essay I will describe the problem of change, show how perdurantism attempts to solve it, and explore some difficulties with perdurantism.
+
+The problem of change has an ancient pedigree, but I will follow the helpfully precise presentation of Haslanger~\cite{Haslanger2003-HASPTT}, who gives five premises that express our intuitions about how objects change:
+
+\begin{description}
+\item[\law{persistence}]Objects persist through change.
+\item[\law{identity}]If an object persists through a change, the object
+  before and after the change is the same object.
+\item[\law{incompatibility}]The properties involved in a change are incompatible.
+\item[\law{non-contradiction}]An object cannot have incompatible properties.
+\item[\law{proper subject}]The object undergoing the change is itself the proper subject of the properties involved in the change.
+\end{description}
+
+The problem, then, is this:
+
+\begin{itemize}
+\item By \law{persistence} and \law{identity} the same object exists both before and after a change.
+\item By \law{proper subject} and \law{incompatibility}, an object has properties after a change incompatible with those it had before.
+\item But by \law{non-contradiction}, an object cannot have incompatible properties. We have a contradiction!
+\end{itemize}
+
+To resist this valid argument we must reject one of its premises. In each case this has unsavoury consequences:
+
+\begin{description}
+\item[\law{persistence}]Things cannot stay the same.
+\item[\law{identity}]Every change results in a numerically distinct object.
+\item[\law{non-contradiction}]An object can have incompatible properties: this seems to deny change is possible!
+\item[\law{proper subject}]An object is not the thing that has properties.
+\end{description}
+
+\noindent Each of these options outrages common sense; we would rather not have to take any of them!
+
+One apparent omission from the premises above is any notion of time, other than \emph{before} and \emph{after}. Is it not reasonable to say that objects have incompatible properties at different times? How might we introduce this idea? Perdurantism does this by rejecting \law{proper subject}, as the premise with the weakest intuitive appeal: it is essentially the notion that objects have temporal parts. We say “\var{x} is a temporal part of \var{y} at time \var{t}” to mean:
+
+\begin{enumerate}
+\item \var{x} exists at time \var{t}, and only then
+\item \var{x} is a part of \var{y} at time \var{t}
+\item \var{x} is spatially congruent with \var{y} at time \var{t}
+\end{enumerate}
+
+We can think of an object now as being a “worm” extended in time whose segments are the object’s temporal parts. Properties of the object are properly properties of its temporal parts. For example, suppose a banana is green on day one and red on day two; then the banana consists of a green temporal part and a red temporal part. It is not the banana that is green or red, but its temporal parts. In more everyday terms, perdurantism accounts for change by saying that objects can have incompatible properties at different times.
+
+I shall now discuss some difficulties with perdurantism. In order to do so, we need a temporal analogue of the Doctrine of Undetached Parts~\cite{vanInwagen1981}, called the Thesis of Temporal Locality: if the lifetime of an object is split into two parts, we obtain two objects which are temporal parts of the whole object. That is, any bisection of the “temporal worm” yields two “sub-worms”.
+
+First, perdurantism has a “Too Many Thinkers” problem: if I consider my temporal parts before and after the present moment (which exist by the Thesis of Temporal Locality), they are both thinking my thoughts at the times at which they exist. But so am I! It seems odd to say that my thoughts have two thinkers.
+
+Secondly, a version of the Problem of Increase arises with perdurantism. Suppose I am killed by a lightning strike, and my eulogist would like to say that I could have lived longer. Had I done so, then by the Thesis of Temporal locality, my longer-lived self would be made up of two objects, one with exactly the same temporal parts as I have, plus another from my actual death to my alternate’s future death. So I share my life and location with another object with exactly the same temporal parts (a “Too Many Things” problem, and, as a corollary, another “Too Many Thinkers” problem), unless my dying prevents this “sub-alternate-me” from existing (in which case, the existence of an object depends on an event that happens outside its temporal extension).
+
+Both of these problems could be addressed by saying that, just as it is the banana’s temporal parts that are the proper subject of the property “being green” or “being red”, and the banana is only derivatively green or red at different times, so it is my temporal parts that really think, and I only think derivatively. This seems intuitively the “wrong way round”: surely it is \emph{I} who really think? But it is consistent with our rejection of \law{proper subject}.
+
+In conclusion, perdurantism may not be a perfectly neat solution to the problem of change, but it has the merit of clashing less obviously with our intuitions than any other obvious solution. At the very least, it would seem that any other solution must also flesh out the notion of time as it applies to change: perdurantism is at least a step in the right direction.
 
 \bibliographystyle{plain}
 \bibliography{philosophy}
 
 %TC:ignore
-\section*{Acknowledgement}
+% \section*{Acknowledgement}
 
 %TC:endignore
 
 \end{document}
 
-% LocalWords:  Reichenbach perdurantism
+% LocalWords:  Reichenbach Haslanger Undetached
