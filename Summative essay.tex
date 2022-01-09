@@ -1,0 +1,229 @@
+%
+% Summative essay
+%
+% Reuben Thomas
+%
+
+
+\documentclass[english,a5paper]{scrartcl}
+\usepackage{babel,newpxtext,url,caption,varwidth,calc,csquotes,microtype}
+\usepackage[utf8x]{inputenc}
+
+
+
+% Alter some default parameters for general typesetting
+
+\frenchspacing
+%TC:macro \subtitle [header]
+
+% Avoid widows and orphans
+% https://mailman.ntg.nl/pipermail/ntg-context/2013/074250.html
+\widowpenalty 10000
+\clubpenalty 10000
+
+% New commands
+
+\newlength{\largeboxwidth}\setlength{\largeboxwidth}{4em}
+\newlength{\boldfboxrule}\setlength{\boldfboxrule}{3\fboxrule}
+\newlength{\boxframeboxwidth}
+\newlength{\origfboxrule}\setlength{\origfboxrule}{\fboxrule}
+\newcommand{\boldframebox}[2][\width+2\fboxsep]{{\setlength{\fboxrule}{\boldfboxrule}\framebox[#1]{#2}}}
+\newcommand{\boldfbox}[1]{\boldframebox{#1}}
+
+
+\begin{document}
+
+\title{‘There is no attractive solution to the paradox of increase.’\\Discuss.}
+\subtitle{Summative Essay\\\input{Summative essay.wc}words}
+\date{9th January 2022}
+\maketitle
+
+\section{Introduction}
+
+There is one attractive solution to the paradox of increase: there is no paradox. In this essay I will show that the appearance of paradox rests on a loose definition of “thing”, and that by defining this notion more carefully, the paradox is dissolved; depending on the definition chosen, a number of different solutions appear.
+
+This essay has four main sections. First, I describe the paradox of increase. Next, I analyse the notion of “thing”. I then show that the appearance of paradox comes from using the word “thing” with multiple meanings simultaneously, consider several everyday notions of “thing”, give the corresponding solutions to the paradox, and draw lessons for a general definition of “thing”. Finally, I show what happens with Olson’s formalization of the paradox.
+
+\section{The paradox of increase}
+
+The earliest known discussion of the paradox is by the third-century BCE Athens-based Stoic, Chrysippus~\cite{moran10.1111/rati.12185};\footnote{Chrysippus in fact discusses the equivalent “paradox of decrease”.} it received little later attention until the 20th century CE. Olson describes it as follows~\cite[§1]{olson10.2307/27903994}:\footnote{Italics mine, terminology lightly edited for consistency: I have used “thing” everywhere for “object”, and “compose” for “conjoin”.}
+
+\begin{quote}
+Suppose we have a thing, A, and we want to make it bigger by adding a part, B. That is, we want to bring it about that A first lacks and then has B as a part. Imagine, then, that we compose B [with] A in some appropriate way. \emph{Never mind what A and B are, or what this composing amounts to: let A be anything that can gain a part if anything can gain a part, and let B be the sort of thing that can become a part of A, and suppose we do whatever it would take to make B come to be a part of A if this is possible at all}.
+
+\begin{figure}[h]
+  \centering%
+  Before: \framebox[\largeboxwidth]{A}\hspace{1em}\fbox{B}\hspace{5ex}%
+  After: \framebox[\largeboxwidth]{A}\fbox{B}%
+  \caption{}%
+  \label{atomicfigure}
+\end{figure}
+
+Have we thereby made B a part of A? It seems not. We seem only to have brought it about that B is attached to A.
+
+We have rearranged A's surroundings by giving it a new neighbor, but we haven't given it a new part. If B has come to be a part of anything, it is the thing made up of A and B after our composing. But that thing didn't gain any new parts either. It didn't exist at all when we started: our composing B [with] A brought it into existence. Or if it did exist at the outset, it already had B as a part then and we merely changed it from a disconnected or “scattered” thing\textelp{}to a connected one.
+\end{quote}
+
+Olson also gives a formalization of the paradox; I present and comment on it in section~\ref{formalization}.
+
+The section that I have italicized suggests that Olson does not deem it necessary to define what a “thing” is, what a “part” is, or what it is to “compose”, and indeed he does not define them in the paper. But to evaluate the applicability of the argument, we need, if not definitions of those key terms, at least necessary and/or sufficient conditions that constrain their meanings.
+
+Let’s have a go at defining these terms.
+
+\section{What is a “thing”?}
+
+Like most common words, “thing” is used with a variety of meanings: consider, in the field of governance, the differences between Icelandic “Alþingi” (“Althing”), Latin “res publica” and Italian “cosa nostra”. In the case of the paradox of increase, we clearly mean a physical thing. But what \emph{is} a physical thing?
+
+Here are two possibilities:
+
+\begin{description}
+\item[Atomic sense]As materialists with a basic grasp of modern physics, the only things we can be sure of are elementary particles, atoms, and perhaps molecules. When we identify more complex structures, we do so more or less arbitrarily. A simple notion of thing, therefore, is a particular collection of atoms. This is easy to reason about, but does not really correspond to our everyday notion.
+\item[Everyday sense]Like most everyday notions, our idea of a “thing” is a slippery Wittgensteinian “family resemblance” sort of notion. So, I am not going to define it either, but instead rely on the intuition I share with you, reader, about what a thing is. I claim that not only will our intuitions correspond fairly well, but we’ll also agree roughly about the degree to which different ideas of “thing” qualify.
+\end{description}
+
+The other two terms we want to define can be treated more simply. Olson seems to defer to mereology for his notion of “part”: he does not do so explicitly, but refers to mereological coincidence in his formalization of the argument. For each of the senses of “thing” proposed above, we can say that a part of a thing is simply “some of the thing”. (In particular, we do not need non-physical notions of “part”.) For the atomic sense of “thing”, this means “some of the atoms in the thing”.
+
+Finally, we shall define composition in the everyday sense as “putting things together”. For the atomic sense this means “taking the union of two collections of atoms”.
+
+Let’s see what happens to the paradox of increase when we use “thing” in each of these senses.
+
+\section{Can a thing gain a part?}
+
+With the atomic sense, the answer is clearly “no”. There is no paradox here: a thing is a collection of atoms; when we add more atoms to the collection, it becomes a different collection. It is impossible to add a part to a thing \emph{by definition}.
+
+In the everyday sense of “thing”, the answer at first appears to be the same: if we put two things together, we have a different thing from the one we started with. But this does not correspond with our intuitions: we feel the answer should be “yes”. So, what has gone wrong?
+
+Olson’s presentation of the paradox purports to show that we have the same things as we started with: either we still have two (A and B), or we always had only one (A plus B). Above, I showed that with the atomic sense of “thing”, it is the definition that prevents a thing from gaining a part; in terms of the argument, it is not “possible at all”. For the everyday sense of “thing”, let us assume that, on the contrary, it is certainly possible to add a part to a thing, as our common sense tells us. We accept the premises, and we accept the reasoning. How then do we resist the argument?
+
+The problem is with the identification of the things. The way the argument labels things implies the atomic sense of “thing”: a label “A” or “B” is always used to mean the same substance. Meanwhile, the argument’s supposition that adding a part to a thing \emph{might} be possible implies a more flexible definition. It is this definitional indecision that leads to paradox.
+
+I have already shown above that there is no paradox if we stick to the atomic sense; in that case, for a thing to gain a part is impossible by definition. How about if we adopt the everyday sense?
+
+Let’s try with some examples.
+
+\subsection{A tree}
+
+A tree can gain roots, branches, leaves (or needles). On what grounds do we allow this?
+
+\begin{itemize}
+\item The added parts are smaller than the tree. (And yet, over a tree’s life it grows orders of magnitude larger.)
+\item The added parts grow organically from the tree, so they seem to be integral to it. (And yet, they consist of atoms taken in from the tree’s environment.)
+\item We can distinguish the tree, including its added parts, from its surroundings. (This is partly a question of perspective: it is much easier above ground than below.)
+\end{itemize}
+
+Figure~\ref{atomicfigure} is not a good representation of the tree: the new part (a leaf, say) does not seem to us to exist before it is added, and afterwards the tree is the whole thing; so, we can redraw figure~\ref{atomicfigure} thus:
+
+\newsavebox{\combinedthing}%
+\begin{figure}[h]
+  \savebox{\combinedthing}{\framebox[\largeboxwidth]{\vphantom{C}}\fbox{B\vphantom{C}}}%
+  \centering%
+  Before: \begin{varwidth}[t]{1in}\framebox[\largeboxwidth]{\vphantom{A}}\\\makebox[\largeboxwidth]{A}\end{varwidth}
+  \hspace{5ex}%
+  After: \begin{varwidth}[t]{1in}\usebox{\combinedthing}\\\makebox[\wd\combinedthing]{A}\end{varwidth}
+  \caption{}
+  \label{treefigure}
+\end{figure}
+
+There is no paradox here, because we have not composed two things: we don’t add a leaf to the tree; rather, it grows a leaf.
+
+\subsection{A LEGO® model}
+
+On the one hand, it may seem that a model growing by having parts added is quite similar to a tree growing (indeed, we might make a LEGO model of a tree); on the other, the parts certainly exist in advance. What are we to make of this case? If we treat the model as a collection of “atoms” (pieces), then it is a fixed collection, which is merely rearranged (from disconnected to connected). It does not gain a part, nor can it without becoming a different thing. Alternatively, consider the instructions for building the model. A typical LEGO instruction leaflet designates a particular base piece, and then shows parts being added to it, step by step. The thing is considered to be those parts which have been assembled so far; it acquires new parts at each step. The thing that grows is distinguished, not by any inherent property, but by the construction process. A corresponding version of figure~\ref{atomicfigure} is:
+
+\newsavebox{\partthing}%
+\savebox{\partthing}{\fbox{B}}
+\begin{figure}[h]
+  \centering%
+  Before: \boldframebox[\largeboxwidth]{A}\hspace{1em}\fbox{B}\hspace{5ex}%
+  After: \boldfbox{\makebox[\largeboxwidth]{A}\raisebox{0pt}[0pt][0pt]{\rule[-\dp\partthing]{\origfboxrule}{\ht\partthing+\dp\partthing}}\hspace{\fboxsep}\hspace{-1\origfboxrule}B}%
+  \caption{}%
+  \label{legofigure}
+\end{figure}
+
+\noindent Here, we use bold lines to show the thing being constructed; non-bold lines are part boundaries.
+
+\subsection{Office equipment}
+
+Consider an office printer in which a toner cartridge is installed. Both printer and cartridge will have a serial number. From the manufacturer’s point of view, they are two things, and putting them together does not change that. The organisation that owns the printer, however, will most probably assign just the printer an asset code. On installing the cartridge, the printer has gained a part. Here, we have two different, but compatible views: they are compatible as they apply to the same physical substance, and they do not make conflicting metaphysical claims.
+
+\pagebreak We can diagram this thus:
+
+\begin{figure}[h]
+  \newsavebox{\combinedboldthing}%
+  \savebox{\combinedboldthing}{\boldfbox{\makebox[\largeboxwidth]{P}\raisebox{0pt}[0pt][0pt]{\rule[-\dp\partthing]{\origfboxrule}{\ht\partthing+\dp\partthing}}\hspace{\fboxsep}\hspace{-1\origfboxrule}C}}%
+  \centering%
+  Before: \begin{varwidth}[t]{1in}\boldframebox[\largeboxwidth]{P}\\\makebox[\largeboxwidth]{A}\end{varwidth}\hspace{1em}\fbox{C}
+  \hspace{5ex}%
+  After: \begin{varwidth}[t]{1in}\usebox{\combinedboldthing}\\\makebox[\wd\combinedboldthing]{A}\end{varwidth}%
+  \caption{}%
+  \label{printerfigure}
+\end{figure}
+
+\noindent The asset A gains a part when the cartridge C is added to the printer P.
+
+\subsection{A universal definition of “thing”?}
+
+Considering the examples above, it seems we could elaborate a universal definition of “thing”. Figure~\ref{printerfigure} is a combination of figures~\ref{treefigure} and~\ref{legofigure}: we could add the external label A of figure~\ref{treefigure} to~\ref{legofigure}, and the bold line designating the “thing being constructed” of figure~\ref{legofigure} to figure~\ref{treefigure}, and all the figures in this section would have the same form. But what about figure~\ref{atomicfigure}? With a pair of atoms, there is no “thing being constructed” to put in bold, nor a “growing thing” to decorate with the external label A. So, the meaning of “thing” is not coherent between the two cases. Looking a little more closely, it’s not clear that the external label A means the same thing in the case of the tree as in the case of the office printer; at any rate, we would not say that the printer grows a cartridge!
+
+In sum, it’s not clear that we can find a single definition of “thing” that works for all cases, unless by constructing a list of different cases that we cannot reasonably hope will ever be complete.
+
+\section{Olson’s formalization of the paradox}
+\label{formalization}
+
+Olson formalizes the paradox of increase as follows:
+
+\begin{quote}
+To avoid assuming the point at issue, call the thing that looks like A and ends up attached to B, C. Suppose, then, that when we compose to A we make it a part of A, so that A comes to be made up of B and C, like this:
+
+\begin{figure}[h]
+  \savebox{\combinedthing}{\framebox[\largeboxwidth]{C}\fbox{B\vphantom{C}}}%
+  \centering%
+  Before: \framebox[\largeboxwidth]{A}\hspace{1em}\fbox{B}\hspace{5ex}%
+  After: \begin{varwidth}[t]{1in}\usebox{\combinedthing}\\\makebox[\wd\combinedthing]{A}\end{varwidth}
+  \caption{}
+\end{figure}
+\end{quote}
+
+Olson runs the argument as a \emph{reductio ad absurdum}:
+
+\begin{quote}
+\begin{enumerate}
+\item \emph{(Premise)} A acquires B as a part.
+  \label{acquisition}
+\item \emph{(Premise)} When A acquires B as a part, A comes to be composed of B and C.
+  \label{composition}
+\item \emph{(From~\ref{composition} and the definition of “compose”)} C does not acquire B as a part.
+  \label{non-acquisition}
+\item \emph{(Premise)} C exists before B is attached.
+  \label{pre-existence}
+\item \emph{(From~\ref{composition}, \ref{non-acquisition} and~\ref{pre-existence}, as C doesn’t grow, move or shrink when B is attached)} C coincides mereologically with A before B is attached.
+  \label{coincidence}
+\item \emph{(Premise)} No two things can coincide mereologically at the same time.
+  \label{no-coincidence}
+\item \emph{(From~\ref{coincidence} and~\ref{no-coincidence})} C~=~A
+  \label{identity}
+\item \emph{(From~\ref{non-acquisition} and~\ref{identity})} A does not acquire B as a part, contradicting~\ref{acquisition}.
+  \label{paradox}
+\end{enumerate}
+\end{quote}
+
+This argument appears complicated, but all the deduction steps are straightforward. It is premise~\ref{no-coincidence} that we reject; as a result, steps~\ref{identity}\footnote{Much of the force of the paradox of increase comes from the sense that it is making metaphysical claims, because of its use of that treacherous notion, identity. If we take the various everyday notions of “thing” as descriptions that are useful in particular contexts, rather than metaphysical claims in potential conflict with each other, the paradox loses its sting even if we do believe it to be genuine.} and~\ref{paradox} do not follow for us.
+
+\section{Conclusion}
+
+In this essay, I have argued that the paradox of increase is no paradox when a single consistent definition of the notion of “thing” is used, and that we are unlikely to find a simple definition of “thing” that covers all of the ways in which we use the everyday sense of “thing”. This should not be a surprise given the multi-faceted nature of most everyday notions.
+
+%TC:ignore
+ \section*{Acknowledgement}
+
+I thank Alistair Turnbull for several excellent suggestions for the improvement of this essay.
+%TC:endignore
+
+\bibliographystyle{plain}
+\bibliography{philosophy}
+
+\end{document}
+
+% LocalWords:
+
+% LocalWords:  Chrysippus mereologically Wittgensteinian absurdum
